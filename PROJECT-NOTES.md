@@ -48,6 +48,7 @@ Copy for the new pages was condensed from the live site (service/industry pages)
 ## Known gaps / things to remember
 
 - Contact form is mailto-only (see above).
+- **Arkansas map outline** (`js/arkansas-network.js`): real boundary from the US Census 2010 500k cartographic file, simplified to 462 points, densified and drawn as a smooth Path2D at 2px. The dot grid fills the same shape. Source URL used: eric.clst.org gz_2010_us_040_00_500k.json (public Census data). If the map ever needs regenerating, simplify with Douglas-Peucker around 0.003 degrees.
 - **Text width policy:** the owner prefers no `max-width` / `ch` caps on text; text fills its column or the 1320px container. The only text caps kept are on the Home hero title and intro (`.home-hero__title`, `.home-hero__intro`), because that text sits over the animated map. Graphic columns (diagram, radar, flow, service index) keep their own widths.
 - The screenshot tool in the Claude preview pane can catch pages mid-entrance-animation and show blank hero areas. That is a capture timing quirk, not a bug.
 - No traffic data was available for the audit. Before any real consolidation or redirects, get Search Console data.
