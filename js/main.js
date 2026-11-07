@@ -136,7 +136,27 @@
     requestAnimationFrame(drift);
   }
 
+  // Contact page (preview only): no backend on GitHub Pages, so the form composes an email instead.
+  function initContactForm() {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const d = Object.fromEntries(new FormData(form));
+      const body = [
+        `Name: ${d.first} ${d.last}`,
+        d.company ? `Company: ${d.company}` : '',
+        `Email: ${d.email}`,
+        d.phone ? `Phone: ${d.phone}` : '',
+        '',
+        d.message || ''
+      ].filter((line, i) => line || i > 3).join('\n');
+      window.location.href = `mailto:info@vtslr.com?subject=${encodeURIComponent('Website inquiry')}&body=${encodeURIComponent(body)}`;
+    });
+  }
+
   initMobileNav();
+  initContactForm();
   initEntranceAnimations();
   initProblemRotator();
   initCtaStripes();
