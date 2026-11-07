@@ -148,7 +148,7 @@ a:hover { color: var(--signal-red); }
   color: var(--body-text);
   text-wrap: pretty;
 }
-.lede--wide { line-height: 1.65; max-width: 620px; }
+.lede--wide { line-height: 1.65; }
 
 .card-text {
   font-size: 15.5px;
@@ -256,7 +256,6 @@ a:hover { color: var(--signal-red); }
   flex-direction: column;
   gap: 32px;
 }
-.cta__content .heading-cta { max-width: 13ch; }
 
 /* 5. Header
    ========================================================================== */
@@ -429,14 +428,14 @@ a:hover { color: var(--signal-red); }
   font-size: clamp(46px, 6.6vw, 108px);
   line-height: 0.95;
   letter-spacing: -0.045em;
-  max-width: 12.5ch;
+  max-width: 12.5ch; /* keeps the headline clear of the map on the right */
   text-wrap: balance;
 }
 .home-hero__intro {
   font-size: clamp(16px, 1.3vw, 18px);
   line-height: 1.65;
   color: var(--grey-200);
-  max-width: 600px;
+  max-width: 600px; /* same reason: stays left of the map */
   text-wrap: pretty;
 }
 .home-hero__stats {
@@ -613,7 +612,7 @@ a:hover { color: var(--signal-red); }
 .guide__text { flex: 1 1 420px; display: flex; flex-direction: column; gap: 14px; }
 .guide__text .label { color: var(--accent); }
 .guide__text h2 { font-weight: 400; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.1; letter-spacing: -0.03em; text-wrap: balance; }
-.guide__text p { font-size: 16px; line-height: 1.65; color: var(--body-text); max-width: 720px; text-wrap: pretty; }
+.guide__text p { font-size: 16px; line-height: 1.65; color: var(--body-text); text-wrap: pretty; }
 .guide .btn { flex: none; }
 
 .cta-stripes {
@@ -678,7 +677,7 @@ a:hover { color: var(--signal-red); }
   letter-spacing: -0.045em;
   text-wrap: balance;
 }
-.about-hero__copy p { line-height: 1.65; max-width: 580px; }
+.about-hero__copy p { line-height: 1.65; }
 .about-hero__portrait { height: clamp(460px, 48vw, 640px); border-radius: 28px 28px 0 0; }
 .about-hero__portrait img { object-position: center 20%; }
 .name-tag {
@@ -702,7 +701,6 @@ a:hover { color: var(--signal-red); }
   font-size: clamp(30px, 3.8vw, 58px);
   line-height: 1.12;
   letter-spacing: -0.035em;
-  max-width: 22ch;
   text-wrap: balance;
 }
 .story__columns {
@@ -767,7 +765,7 @@ a:hover { color: var(--signal-red); }
 .about-cta__map { position: absolute; top: -6%; bottom: -6%; right: -8%; width: min(980px, 70%); opacity: 0.6; }
 .about-cta__map ar-network { position: absolute; inset: 0; }
 .about-cta .cta__fade { background: linear-gradient(90deg, var(--black) 0%, rgba(10, 10, 11, 0.85) 40%, rgba(10, 10, 11, 0) 75%); }
-.about-cta .heading-cta { font-size: clamp(40px, 5.2vw, 80px); max-width: 14ch; }
+.about-cta .heading-cta { font-size: clamp(40px, 5.2vw, 80px); }
 
 /* 9. Cybersecurity
    ========================================================================== */
@@ -800,8 +798,7 @@ a:hover { color: var(--signal-red); }
   letter-spacing: -0.045em;
   text-wrap: balance;
 }
-.cyber-hero__copy .lede { line-height: 1.65; max-width: 580px; }
-.contact-hero .cyber-hero__copy .lede { max-width: none; }
+.cyber-hero__copy .lede { line-height: 1.65; }
 .cyber-hero__diagram { display: flex; flex-direction: column; gap: 20px; width: 100%; max-width: 620px; justify-self: center; }
 .cyber-hero__diagram layered-defense { position: relative; aspect-ratio: 1 / 1; width: 100%; }
 .cyber-hero__caption {
@@ -810,7 +807,6 @@ a:hover { color: var(--signal-red); }
   line-height: 1.6;
   letter-spacing: 0.04em;
   color: var(--grey-300);
-  max-width: 440px;
 }
 
 .cyber-problems-section { padding: clamp(88px, 11vw, 150px) var(--gutter); }

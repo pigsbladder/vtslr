@@ -48,6 +48,7 @@ Copy for the new pages was condensed from the live site (service/industry pages)
 ## Known gaps / things to remember
 
 - Contact form is mailto-only (see above).
+- **Text width policy:** the owner prefers no `max-width` / `ch` caps on text; text fills its column or the 1320px container. The only text caps kept are on the Home hero title and intro (`.home-hero__title`, `.home-hero__intro`), because that text sits over the animated map. Graphic columns (diagram, radar, flow, service index) keep their own widths.
 - The screenshot tool in the Claude preview pane can catch pages mid-entrance-animation and show blank hero areas. That is a capture timing quirk, not a bug.
 - No traffic data was available for the audit. Before any real consolidation or redirects, get Search Console data.
 - Mobile: home and service heroes used to be full-viewport height with centered content, leaving big empty black bands on tall phones. Fixed at 900px and below (`min-height: 0` plus tighter top/bottom padding, in the Responsive section). Rest of mobile only spot-checked.
@@ -59,4 +60,4 @@ Copy for the new pages was condensed from the live site (service/industry pages)
 1. Review the new pages in the browser on desktop and phone; iterate on look, animation and graphics page by page (that was the stated plan).
 2. Give Home and Services the most polish, since the owner sees them first.
 3. Add more pages only if the owner wants them: Blog index, remaining services, Privacy.
-4. Commit and push to GitHub Pages (changes from this session are uncommitted as of the last update).
+4. Site is live on GitHub Pages (pigsbladder.github.io/vtslr), pushed from `main`. Commit and push after each batch of changes.
