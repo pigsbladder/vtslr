@@ -56,6 +56,18 @@ Copy for the new pages was condensed from the live site (service/industry pages)
 - Not yet checked: full mobile pass of the new pages, Lighthouse/accessibility pass.
 - Redirect map and 301 plan live in `audit/AUDIT.md` (only relevant if this ever replaces the live site).
 
+## Future direction: WordPress conversion (stated 2026-11-09, not started)
+
+If the owner buys in, this static demo must be converted to WordPress, with Claude helping.
+
+**Decisions so far (2026-11-09):**
+- **Hosting:** WordPress on **Hostinger** (self-managed, so custom themes and plugins are allowed). The user already has admin access to everything needed. Note the *current* live site's response headers point to WordPress.com/Automattic infrastructure, so going live on Hostinger likely means a hosting migration (DNS, SSL, and **check where vtslr.com email lives before touching DNS**).
+- **Theme:** a **custom theme** (not a visual block theme). The owner will not want to edit layout; he just edits content.
+- **Plugins:** decide at conversion time; the user already has some in mind (contact form, SEO etc.).
+- **Access/content:** the user can supply admin access, exports or anything else once the owner gives the go-ahead.
+
+**Still to plan when we start:** how to port the `<ar-network>` and `<layered-defense>` web components and `css/styles.css` into the theme, turning the shared header/footer into template parts, custom post types (`service`, `industry`, `location`) and editable content fields so he can change text without touching layout, and the 301 redirects in `audit/AUDIT.md`. Content types on the old site: posts, pages, and custom types `service`, `industry`, `location` (Slim SEO handles sitemaps).
+
 ## Likely next steps
 
 1. Review the new pages in the browser on desktop and phone; iterate on look, animation and graphics page by page (that was the stated plan).

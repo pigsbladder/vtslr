@@ -281,9 +281,6 @@ a:hover { color: var(--signal-red); }
 .brand { display: flex; align-items: center; gap: 16px; flex: none; color: var(--off-white); }
 .brand img { width: 113px; height: 46px; }
 .brand__name {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
   line-height: 1;
   font-size: clamp(12px, 1.15vw, 15px);
   font-weight: 600;
@@ -1076,8 +1073,11 @@ a.service-index__item:hover .service-index__arrow { transform: translateX(6px); 
   .about-cta .cta__fade, .cta__fade { background: rgba(10, 10, 11, 0.72); }
 }
 
+@media (max-width: 680px) {
+  .brand__name { display: none; } /* one-line name needs ~370px; hide it before the header gets crowded */
+}
+
 @media (max-width: 560px) {
-  .brand__name { display: none; }
   .site-footer__grid { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 0 16px; }
   .stat { padding: 16px 0; }
